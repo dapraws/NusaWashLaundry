@@ -776,9 +776,11 @@ https://templatemo.com/tm-588-ebook-landing
           encodeURIComponent(address) +
           " ingin memesan laundry";
 
+        // Replace spaces with %20
+        message = message.replace(/ /g, "%20");
+
         // Construct WhatsApp link
-        var whatsappLink =
-          "https://wa.me/081212820568?text=" + encodeURIComponent(message);
+        var whatsappLink = "https://wa.me/081212820568?text=" + message;
 
         // Redirect to WhatsApp
         window.location.href = whatsappLink;
