@@ -616,15 +616,17 @@ https://templatemo.com/tm-588-ebook-landing
         event.preventDefault();
 
         // Get form values
-        var name = document.getElementById("form-name").value;
-        var address = document.getElementById("form-address").value;
+        var name = "\n\nNama: " + document.getElementById("form-name").value;
+        var address =
+          "\nAlamat: " + document.getElementById("form-address").value;
+        var thanks = "\n\nTerima Kasih.";
 
         // Encode message for URL
         var message =
-          "✨ Order Form ✨\n\n Nama: " +
+          "✨ Order Form ✨" +
           encodeURIComponent(name) +
-          "\nAlamat: " +
-          encodeURIComponent(address);
+          encodeURIComponent(address) +
+          encodeURIComponent(thanks);
 
         // Replace spaces with %20
         message = message.replace(/ /g, "%20");
